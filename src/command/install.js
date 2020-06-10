@@ -41,7 +41,7 @@ progarm.command('install')
     if(fs.existsSync(fileName)) {
         process.exit(1);
     }
-    fs.mkdir(fileName, (err => console.log(err)))
+    fs.mkdir(fileName, (err => err && console.log(err)))
     // execa('npm init')
  }
  /**
