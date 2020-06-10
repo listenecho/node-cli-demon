@@ -1,6 +1,6 @@
 {
-  "name": "@lake/learn-cli",
-  "version": "1.0.0",
+  "name": "@listenecho/node-cli-demon",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -9,12 +9,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://github.com/listenecho/node-cli-demon",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.10.2",
+    "chalk": "^4.1.0",
     "commander": "^5.1.0",
-    "download-git-repo": "^3.0.2"
+    "download-git-repo": "^3.0.2",
+    "execa": "^4.0.2",
+    "g": "^2.0.1",
+    "ora": "^4.0.4",
+    "spinner": "^0.3.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
