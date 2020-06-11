@@ -1,4 +1,4 @@
-const progarm = require('commander')
+const commander = require('commander')
 // 下载git gitLab 或者其他代码托管库的代码
 const download = require('download-git-repo');
 const execa = require('execa')
@@ -17,17 +17,23 @@ const spinner = ora()
  *  3. 将文件下载到package文件夹
  * 
 */
-progarm.command('install')
+const progarm = new commander.Command('install')
    .description('下载 github 项目')
    .action(options => {
-      const { args = [] } = options
-      // 获取参数第一位
-      if (!args.length) return;
-      isExitFile('package')
-      execaPck(args)
+      console.log(1)
+      // const { args = [] } = options
+      // // 获取参数第一位
+      // if (!args.length) return;
+      // isExitFile('package')
+      // execaPck(args)
    })
+   .option(' --yes', 'Add peppers')
+   .option(' --no', 'Add pineapple')
+   .allowUnknownOption()
+   .parse(process.argv);
 
-
+console.log(progarm.no, 1)
+console.log(progarm.yes, 2)
 /**
  * 判断文件夹是否存在
  */
